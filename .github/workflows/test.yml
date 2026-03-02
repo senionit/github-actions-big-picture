@@ -1,7 +1,11 @@
 name: test
 
-on: 
-    push
+on:  
+    push:
+    schedule:
+        - cron: "*/5 * * * *"
+
+
 
 jobs:
     test:
@@ -9,5 +13,3 @@ jobs:
 
         steps:
             - run: echo "hello world"
-            
-    
